@@ -53,11 +53,11 @@ void add_account(char name[256], char dob[10], char* file){
     //TODO: PLEASE APPEND THE DATA TO THE EXISTING DATA STORAGE
 }
 
-void delete_account(int account_no[12]){
+void delete_account(char account_no[12]){
     //TODO: PLEASE REMOVE THE DATA FROM THE EXISTING DATA STORAGE
 }
 
-void view_account(int account_no[12], char* file){
+void view_account(char account_no[12], char* file){
     // Substitute the full file path
     // for the string file_path
     FILE* fp = fopen(file, "r");

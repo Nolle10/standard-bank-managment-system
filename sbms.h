@@ -12,14 +12,14 @@
 
 //Account actions
 void add_account(char name[256], char dob[10], char* file);
-void delete_account(int account_no[12]);
-void view_account(int account_no[12], char* file);
+void delete_account(char account_no[12]);
+void view_account(char account_no[12], char* file);
 void view_all_accounts(char* file);
 int get_account(char account_no[12], char* file);
 
 //Withdraw and deposit actions
-void add_amount(int account_no[12], int amount);
-void withdraw_amount(int account_no[12], int amount);
+void add_amount(char account_no[12], int amount);
+void withdraw_amount(char account_no[12], int amount);
 void transfer_amount(char dest_account_no[12], char src_account_no[12], int amount);
 
 
