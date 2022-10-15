@@ -7,7 +7,7 @@
  * @param account_no
  * @return Row number in data
  */
-int get_account(char account_no[12], char* file){
+int get_account_row(char account_no[12], char* file){
     FILE* fp = fopen(file, "r");
 
     if (!fp)
@@ -49,6 +49,47 @@ int get_account(char account_no[12], char* file){
     }
 }
 
+char* get_account_column(char account_no[12], int column, char* file){
+    FILE* fp = fopen(file, "r");
+
+    if (!fp)
+        printf("Can't open file\n");
+
+    else {
+        // Here we have taken size of
+        // array 1024 you can modify it
+        char buffer[1024];
+
+        int row = 0;
+        int col = 0;
+
+        while (fgets(buffer,
+                     1024, fp)) {
+            col = 0;
+            row++;
+
+            if (row == get_account_row(account_no, file)) {
+                // Splitting the data
+                char *value = strtok(buffer, ",");
+
+                while (value) {
+
+                    // Column 3
+                    if (col == column) {
+                        return value;
+                    }
+
+                    value = strtok(NULL, ", ");
+                    col++;
+                }
+            }
+        }
+
+        // Close the file
+        fclose(fp);
+    }
+}
+
 void add_account(char name[256], char dob[10], char* file){
     //TODO: PLEASE APPEND THE DATA TO THE EXISTING DATA STORAGE
 }
@@ -80,7 +121,7 @@ void view_account(char account_no[12], char* file){
             // To avoid printing of column
             // names in file can be changed
             // according to need
-            if (row == get_account(account_no, file)) {
+            if (row == get_account_row(account_no, file)) {
 
                 // Splitting the data
                 char *value = strtok(buffer, ",");

@@ -49,23 +49,29 @@ cmake_ninja_workdir = C$:/Users/olive/CLionProjects/sbms/cmake-build-debug/
 
 build cmake_object_order_depends_target_sbms: phony || CMakeFiles/sbms.dir
 
-build CMakeFiles/sbms.dir/main.c.obj: C_COMPILER__sbms_Debug C$:/Users/olive/CLionProjects/sbms/main.c || cmake_object_order_depends_target_sbms
-  DEP_FILE = CMakeFiles\sbms.dir\main.c.obj.d
+build CMakeFiles/sbms.dir/src/main.c.obj: C_COMPILER__sbms_Debug C$:/Users/olive/CLionProjects/sbms/src/main.c || cmake_object_order_depends_target_sbms
+  DEP_FILE = CMakeFiles\sbms.dir\src\main.c.obj.d
   FLAGS = -g -std=gnu99
   OBJECT_DIR = CMakeFiles\sbms.dir
-  OBJECT_FILE_DIR = CMakeFiles\sbms.dir
+  OBJECT_FILE_DIR = CMakeFiles\sbms.dir\src
 
-build CMakeFiles/sbms.dir/account.c.obj: C_COMPILER__sbms_Debug C$:/Users/olive/CLionProjects/sbms/account.c || cmake_object_order_depends_target_sbms
-  DEP_FILE = CMakeFiles\sbms.dir\account.c.obj.d
+build CMakeFiles/sbms.dir/src/account.c.obj: C_COMPILER__sbms_Debug C$:/Users/olive/CLionProjects/sbms/src/account.c || cmake_object_order_depends_target_sbms
+  DEP_FILE = CMakeFiles\sbms.dir\src\account.c.obj.d
   FLAGS = -g -std=gnu99
   OBJECT_DIR = CMakeFiles\sbms.dir
-  OBJECT_FILE_DIR = CMakeFiles\sbms.dir
+  OBJECT_FILE_DIR = CMakeFiles\sbms.dir\src
 
-build CMakeFiles/sbms.dir/monetary_actions.c.obj: C_COMPILER__sbms_Debug C$:/Users/olive/CLionProjects/sbms/monetary_actions.c || cmake_object_order_depends_target_sbms
-  DEP_FILE = CMakeFiles\sbms.dir\monetary_actions.c.obj.d
+build CMakeFiles/sbms.dir/src/monetary_actions.c.obj: C_COMPILER__sbms_Debug C$:/Users/olive/CLionProjects/sbms/src/monetary_actions.c || cmake_object_order_depends_target_sbms
+  DEP_FILE = CMakeFiles\sbms.dir\src\monetary_actions.c.obj.d
   FLAGS = -g -std=gnu99
   OBJECT_DIR = CMakeFiles\sbms.dir
-  OBJECT_FILE_DIR = CMakeFiles\sbms.dir
+  OBJECT_FILE_DIR = CMakeFiles\sbms.dir\src
+
+build CMakeFiles/sbms.dir/src/global.c.obj: C_COMPILER__sbms_Debug C$:/Users/olive/CLionProjects/sbms/src/global.c || cmake_object_order_depends_target_sbms
+  DEP_FILE = CMakeFiles\sbms.dir\src\global.c.obj.d
+  FLAGS = -g -std=gnu99
+  OBJECT_DIR = CMakeFiles\sbms.dir
+  OBJECT_FILE_DIR = CMakeFiles\sbms.dir\src
 
 
 # =============================================================================
@@ -75,7 +81,7 @@ build CMakeFiles/sbms.dir/monetary_actions.c.obj: C_COMPILER__sbms_Debug C$:/Use
 #############################################
 # Link the executable sbms.exe
 
-build sbms.exe: C_EXECUTABLE_LINKER__sbms_Debug CMakeFiles/sbms.dir/main.c.obj CMakeFiles/sbms.dir/account.c.obj CMakeFiles/sbms.dir/monetary_actions.c.obj
+build sbms.exe: C_EXECUTABLE_LINKER__sbms_Debug CMakeFiles/sbms.dir/src/main.c.obj CMakeFiles/sbms.dir/src/account.c.obj CMakeFiles/sbms.dir/src/monetary_actions.c.obj CMakeFiles/sbms.dir/src/global.c.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\sbms.dir
